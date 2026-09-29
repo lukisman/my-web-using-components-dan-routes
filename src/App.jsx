@@ -1,15 +1,24 @@
-import HeaderComponent from "./components/HeaderComponent";
-import BodyComponent from "./components/BodyComponent";
-import FooterComponent from "./components/FooterComponent";
+import Home from "./components/HomeComponent";
+import About from "./components/AboutComponent";
+import Contact from "./components/ContactComponent";
 import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <HeaderComponent />
-      <BodyComponent />
-      <FooterComponent />
-    </div>
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Home</Link> | {""}
+        <Link to="/about">About</Link> | {""}
+        <Link to="/contact">Contact</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

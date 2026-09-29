@@ -1,17 +1,21 @@
 const FooterComponent = () => {
   return (
-    <footer>
+    <div>
       <h3>Kontak</h3>
       <p>
         Github:{" "}
-        <a href="#" target="_blank">
+        <a href="https://github.com/lukisman" target="_blank">
           {" "}
           @lukisman{" "}
         </a>
         <br />
-        Email: <a href="#"> lukmanhakim@student.upi.edu </a>
+        Email:{" "}
+        <a href="mailto:lukmanhakim@student.upi.edu">
+          {" "}
+          lukmanhakim@student.upi.edu{" "}
+        </a>
       </p>
-    </footer>
+    </div>
   );
 };
 
